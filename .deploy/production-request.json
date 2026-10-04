@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-04T21:41:28+09:00",
-  "reason": "Retry owner-voice copy release after correcting live verification wording for monthly-contract message; preserve draft indexing and KFB boundaries"
+  "requested_at": "2026-10-04T23:38:23+09:00",
+  "reason": "Remove direct public mailbox exposure, route written inquiries through the existing contact form, and remove email from public structured data; preserve draft indexing and KFB boundaries"
 }
