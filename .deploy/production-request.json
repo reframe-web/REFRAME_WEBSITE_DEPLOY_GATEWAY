@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-04T23:38:23+09:00",
-  "reason": "Remove direct public mailbox exposure, route written inquiries through the existing contact form, and remove email from public structured data; preserve draft indexing and KFB boundaries"
+  "requested_at": "2026-10-05T00:00:39+09:00",
+  "reason": "Verify relaxed owner-operated deployment policy: retry transient Drive/Cloudflare propagation, keep only critical availability/contact/KFB/privacy failures blocking"
 }
