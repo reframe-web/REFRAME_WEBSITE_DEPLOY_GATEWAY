@@ -28,13 +28,14 @@ function Invoke-LiveVerification {
   )
 
   for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
-    Write-Output "Verifying $Label at $Origin (attempt $attempt/$MaxAttempts)"
-    & node scripts/verify-live.mjs $Origin
+    Write-Host "Verifying $Label at $Origin (attempt $attempt/$MaxAttempts)"
+    $verificationOutput = & node scripts/verify-live.mjs $Origin 2>&1
     $exitCode = $LASTEXITCODE
+    $verificationOutput | ForEach-Object { Write-Host $_ }
 
     if ($exitCode -eq 0) {
       if ($attempt -gt 1) {
-        Write-Output "$Label verification passed after propagation retry."
+        Write-Host "$Label verification passed after propagation retry."
       }
       return $true
     }
