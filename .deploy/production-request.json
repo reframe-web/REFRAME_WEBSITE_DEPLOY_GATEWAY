@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-05T00:05:25+09:00",
-  "reason": "Re-verify relaxed deployment gate after preserving the critical live-check exit status in the PowerShell retry wrapper"
+  "requested_at": "2026-10-05T01:22:16+09:00",
+  "reason": "Publish mobile homepage hero intrinsic-width fix after user device QA"
 }
