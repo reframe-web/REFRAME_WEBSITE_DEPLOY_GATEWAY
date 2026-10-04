@@ -19,6 +19,35 @@ function Invoke-VersionUpload {
   }
 }
 
+function Invoke-LiveVerification {
+  param(
+    [string]$Origin,
+    [string]$Label,
+    [int]$MaxAttempts = 4,
+    [int]$DelaySeconds = 10
+  )
+
+  for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
+    Write-Output "Verifying $Label at $Origin (attempt $attempt/$MaxAttempts)"
+    & node scripts/verify-live.mjs $Origin
+    $exitCode = $LASTEXITCODE
+
+    if ($exitCode -eq 0) {
+      if ($attempt -gt 1) {
+        Write-Output "$Label verification passed after propagation retry."
+      }
+      return $true
+    }
+
+    if ($attempt -lt $MaxAttempts) {
+      Write-Warning "$Label verification did not pass yet. This may be normal Static Assets propagation; retrying in $DelaySeconds seconds."
+      Start-Sleep -Seconds $DelaySeconds
+    }
+  }
+
+  return $false
+}
+
 Push-Location -LiteralPath $sourceRoot
 try {
   $config = Get-Content -LiteralPath "wrangler.jsonc" -Raw | ConvertFrom-Json
@@ -45,28 +74,34 @@ try {
   $previewMatch = [regex]::Match($upload.Text, "Version Preview URL:\s*(https://[^\s]+)")
   if ($previewMatch.Success) {
     $candidateOrigin = $previewMatch.Groups[1].Value.TrimEnd("/")
-    node scripts/verify-live.mjs $candidateOrigin
-    if ($LASTEXITCODE -ne 0) { throw "Candidate Worker Version verification failed." }
+    if (-not (Invoke-LiveVerification -Origin $candidateOrigin -Label "candidate Worker Version" -MaxAttempts 2 -DelaySeconds 5)) {
+      throw "Candidate Worker Version critical verification failed."
+    }
   }
 
   $versionSpec = "${versionId}@100%"
   & npx --yes wrangler@4.145.0 versions deploy $versionSpec --name $workerName --yes
   if ($LASTEXITCODE -ne 0) { throw "Worker Version deployment failed." }
 
-  node scripts/verify-live.mjs $expectedOrigin
-  if ($LASTEXITCODE -ne 0) { throw "Live Worker verification failed." }
+  if (-not (Invoke-LiveVerification -Origin $expectedOrigin -Label "workers.dev" -MaxAttempts 4 -DelaySeconds 10)) {
+    throw "Live Worker critical verification failed after propagation retries."
+  }
+
   if ($publicOrigin) {
-    node scripts/verify-live.mjs $publicOrigin
-    if ($LASTEXITCODE -ne 0) { throw "Live public-domain verification failed." }
+    if (-not (Invoke-LiveVerification -Origin $publicOrigin -Label "public domain" -MaxAttempts 4 -DelaySeconds 10)) {
+      throw "Live public-domain critical verification failed after propagation retries."
+    }
   }
 
   $summary = @(
     "## RE:FRAME deployment verified",
     "",
-    "- Drive snapshot and tests: passed.",
+    "- Drive snapshot and build/auth checks: passed.",
     "- Worker Version deployment: passed.",
+    "- Critical live checks: passed.",
+    "- Copy, visual markers, and other owner-operated QA are advisory and do not block deployment.",
+    "- Transient Drive snapshot races and Static Assets propagation are retried automatically.",
     "- Existing routes and custom domains: unchanged.",
-    "- workers.dev and public-domain verification: passed.",
     "- Worker Version ID: $versionId",
     "- Source fingerprint: $env:SOURCE_FINGERPRINT"
   ) -join "`n"
