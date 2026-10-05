@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-05T15:51:08+09:00",
-  "reason": "Fix REGENESIS stale service worker cache"
+  "requested_at": "2026-10-05T15:59:56+09:00",
+  "reason": "Version REGENESIS runtime assets to bypass stale v1 cache"
 }
