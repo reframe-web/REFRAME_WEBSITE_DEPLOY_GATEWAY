@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-06T15:54:00+09:00",
-  "reason": "REGENESIS PHASE B: 1P SOLO / 2P VS CPU, isolated AI Worker, opponent mini-board, NOISE attack-counter-rebirth, and difficulty selection"
+  "requested_at": "2026-10-06T16:20:00+09:00",
+  "reason": "REGENESIS PHASE B retry: include regenesis-ai-worker.js in built Static Assets and complete VS CPU live verification"
 }
