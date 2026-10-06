@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-06T10:45:21+09:00",
-  "reason": "Add pause-synced BGM, landing projection, beat-reactive grid, and compact rule controls to REGENESIS"
+  "requested_at": "2026-10-06T11:17:15+09:00",
+  "reason": "Optimize REGENESIS mobile rendering and harden visual-viewport rule controls"
 }
