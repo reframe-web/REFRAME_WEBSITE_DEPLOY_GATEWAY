@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-06T11:51:04+09:00",
-  "reason": "Remove forced-reflow and blur-heavy transient effects from REGENESIS pop feedback"
+  "requested_at": "2026-10-06T14:48:00+09:00",
+  "reason": "Rework REGENESIS BREAK into cell-based shatter/collapse physics with aimed paddle control and v14 cache refresh"
 }
