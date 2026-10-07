@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T06:56:00.000Z",
-  "reason": "REGENESIS_START_SCREEN_TYPE_SYSTEM_V2: polish the WORLD CONTROL start screen toward the approved premium cyber UI direction. Introduce display/tech/readable typography tiers, stronger hierarchy, refined SOLO/VS CPU/ONLINE/INSTALL tiles, difficulty/profile/TOP10/CPU-level panels, and compact responsive behavior while preserving gameplay, online/ranking logic, BREAK V3, branding, KFB auth, DRAFT_MODE and all existing security boundaries."
+  "requested_at": "2026-10-07T08:02:00.000Z",
+  "reason": "REGENESIS_LOGO_V1: adopt the user-approved circular neon 再生 / RE:GENESIS game logo as the canonical game identity. Replace the start-screen text title with the approved logo asset while retaining an accessible text heading; add canonical master, optimized WebP display asset, padded 192/512 PNG PWA icons for round-thumbnail safety; update manifest, service worker cache v21, build copy rules, and regression/live verification including exact pixel hashes. Preserve procedural gameplay visuals, BREAK V3, rankings/online logic, KFB auth, RE:FRAME branding, DRAFT_MODE and existing security boundaries."
 }
