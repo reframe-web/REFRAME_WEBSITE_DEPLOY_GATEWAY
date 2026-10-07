@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T13:43:00.000Z",
-  "reason": "REGENESIS_CPU_TIMING_V1: make VS CPU use the selected WORLD fall-speed curve for both boards, keep CPU difficulty focused on decision quality and attack pressure, update opponent fall animation to the shared ms-per-cell cadence, synchronize new WORLD levels, and advance the PWA cache/verification contract. Preserve online, scoring, KFB authentication, draft indexing controls and existing security boundaries."
+  "requested_at": "2026-10-07T14:14:00.000Z",
+  "reason": "REGENESIS_CPU_TIMING_V2: replace the V1 runtime string-patched CPU worker with a baked shared-gravity worker. VS CPU player and NPC both use the selected WORLD fall-speed curve; CPU difficulty changes think time, placement quality/mistake rate and attack pressure only. Gravity updates apply to the next CPU piece without restarting the current fall. Preserve gameplay V4 BREAK/FUSE/settle motion, rankings/online, KFB auth, DRAFT_MODE/noindex and security boundaries. Keep PWA cache v24 and verify workers.dev + public domain."
 }
