@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T08:16:30.000Z",
-  "reason": "REGENESIS_LOGO_V1_FINAL: finish the user-approved circular neon 再生 / RE:GENESIS identity rollout after generation is closed. Use the approved logo on the start screen with accessible text fallback; serve optimized display WebP, square social share image, and round/mask-safe 192/512 PNG PWA icons; switch game favicon/PWA outputs to PNG, preload the logo, bump service-worker cache to v21, and update build/regression/live checks. Preserve gameplay, BREAK V3, rankings/online logic, KFB auth, RE:FRAME brand, DRAFT_MODE and security boundaries."
+  "requested_at": "2026-10-07T08:23:00.000Z",
+  "reason": "REGENESIS_LOGO_V1_FINAL_VERIFY: rerun the finalized logo release after correcting the live verification contract from service-worker cache v20 to the intentionally deployed v21. Public version c399fe58-2c2b-4bdb-af29-05fa66614282 already received the logo assets; this run must confirm the current Drive source, build/auth/game regressions, PNG PWA icons, approved start-screen logo, v21 stale-runtime recovery, workers.dev and public-domain live state. No gameplay/security boundary changes."
 }
