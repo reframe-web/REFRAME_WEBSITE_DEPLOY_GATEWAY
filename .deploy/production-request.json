@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T01:26:17.933Z",
-  "reason": "RE:FRAME official logo rollout: approved square house/flame/cross mark; update header/footer/favicon/apple/OG/structured data, pixel-integrity live tests; preserve draft and KFB boundaries"
+  "requested_at": "2026-10-07T02:22:03.859Z",
+  "reason": "REGENESIS_DO_MIGRATION: first SQLite Durable Objects for RE:GENESIS top10 JST ranking, two-player online rooms, lobby UI, live scoreboard; latest approved RE:FRAME logo preserved; KFB auth/draft boundaries unchanged; local npm test and visual QA passed."
 }
