@@ -55,6 +55,32 @@ try {
   $workerName = [string]$config.name
   if (-not $workerName) { throw "Worker name is missing from wrangler.jsonc." }
 
+  # One-time Durable Object SQLite migration cannot use Wrangler Versions Upload.
+  # Keep the normal candidate-version workflow for every other release.
+  $requestFile = Join-Path (Get-Location) ".deploy/production-request.json"
+  $releaseReason = ""
+  if (Test-Path -LiteralPath $requestFile) {
+    $requestInfo = Get-Content -LiteralPath $requestFile -Raw | ConvertFrom-Json
+    $releaseReason = [string]$requestInfo.reason
+  }
+  if ($releaseReason -match "REGENESIS_DO_MIGRATION") {
+    $migrationConfigured = @($config.migrations | Where-Object { $_.tag -eq "regenesis-network-v1" -and @($_.new_sqlite_classes).Count -ge 2 }).Count -eq 1
+    if (-not $migrationConfigured) { throw "RE:GENESIS one-time SQLite migration is absent or incomplete in Drive config." }
+    Write-Host "RE:GENESIS first SQLite Durable Object migration: validated direct Worker deploy (one-time only)."
+    & npx --yes wrangler@4.145.0 deploy --config wrangler.jsonc --name $workerName --outdir .wrangler-releases
+    if ($LASTEXITCODE -ne 0) { throw "Direct Worker deployment for SQLite DO migration failed." }
+    if (-not (Invoke-LiveVerification -Origin $expectedOrigin -Label "workers.dev" -MaxAttempts 4 -DelaySeconds 10)) {
+      throw "RE:GENESIS migration live Worker verification failed."
+    }
+    if ($publicOrigin -and -not (Invoke-LiveVerification -Origin $publicOrigin -Label "public domain" -MaxAttempts 4 -DelaySeconds 10)) {
+      throw "RE:GENESIS migration public-domain verification failed."
+    }
+    if ($env:GITHUB_STEP_SUMMARY) {
+      Add-Content -LiteralPath $env:GITHUB_STEP_SUMMARY -Value "RE:GENESIS SQLite DO first migration: direct deploy and both live origins verified; other releases retain Version Preview."
+    }
+    return
+  }
+
   $upload = Invoke-VersionUpload -WorkerName $workerName
   $upload.Output | ForEach-Object { Write-Output $_ }
 
