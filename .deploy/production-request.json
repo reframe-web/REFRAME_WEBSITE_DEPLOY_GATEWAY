@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T06:16:45.035Z",
-  "reason": "REGENESIS_BREAK_V3: top-down charged BREAK bonus with fast launch, shrinking/vanishing upper paddle, open-top escape ending, stronger ranked-cell damage and visual charge feedback; SOUND LINK one-award-per-beat guard; pause-aware combo expiry; CPU LINK/FUSE placement-origin parity with player; PWA cache v20; regression/live verification updated. Preserve SOLO difficulty-separated rankings, online rooms, official branding, KFB auth and DRAFT_MODE."
+  "requested_at": "2026-10-07T06:56:00.000Z",
+  "reason": "REGENESIS_START_SCREEN_TYPE_SYSTEM_V2: polish the WORLD CONTROL start screen toward the approved premium cyber UI direction. Introduce display/tech/readable typography tiers, stronger hierarchy, refined SOLO/VS CPU/ONLINE/INSTALL tiles, difficulty/profile/TOP10/CPU-level panels, and compact responsive behavior while preserving gameplay, online/ranking logic, BREAK V3, branding, KFB auth, DRAFT_MODE and all existing security boundaries."
 }
