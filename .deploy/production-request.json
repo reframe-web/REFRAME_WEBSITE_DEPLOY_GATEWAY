@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T02:22:03.859Z",
-  "reason": "REGENESIS_DO_MIGRATION: first SQLite Durable Objects for RE:GENESIS top10 JST ranking, two-player online rooms, lobby UI, live scoreboard; latest approved RE:FRAME logo preserved; KFB auth/draft boundaries unchanged; local npm test and visual QA passed."
+  "requested_at": "2026-10-07T02:29:26.063Z",
+  "reason": "REGENESIS_DO_MIGRATION: retry after correcting Gateway one-shot migration marker path; rank TOP10 and two-player online rooms source stable; local tests passed; preserve RE:FRAME logo and KFB."
 }
