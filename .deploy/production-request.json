@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T03:49:35.413Z",
-  "reason": "REGENESIS_SOLO_SPEED_V1: EASY NORMAL HARD distinct initial gravity + per-level acceleration, difficulty-isolated JST Top10/local best, mobile portrait-landscape lobby layout and back to menu; retain network rooms, official branding, KFB auth and DRAFT_MODE. 8 Drive source files updated, backend and 10 viewport static QA passed."
+  "requested_at": "2026-10-07T06:16:45.035Z",
+  "reason": "REGENESIS_BREAK_V3: top-down charged BREAK bonus with fast launch, shrinking/vanishing upper paddle, open-top escape ending, stronger ranked-cell damage and visual charge feedback; SOUND LINK one-award-per-beat guard; pause-aware combo expiry; CPU LINK/FUSE placement-origin parity with player; PWA cache v20; regression/live verification updated. Preserve SOLO difficulty-separated rankings, online rooms, official branding, KFB auth and DRAFT_MODE."
 }
