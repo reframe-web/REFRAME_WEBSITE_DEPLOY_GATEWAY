@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T15:15:00.000Z",
-  "reason": "SEO_PUBLIC_LAUNCH_V1: publish RE:FRAME indexability after user/legal approval; publish robots + sitemap + canonical; exclude /kfb-preview/ and preserve KFB auth/noindex; verify workers.dev + public domain."
+  "requested_at": "2026-10-07T15:19:00.000Z",
+  "reason": "SEO_PUBLIC_LAUNCH_V1_RETRY: retry after GitHub Actions startup_failure before any job started. Drive canonical already contains approved public indexing, canonical/robots/sitemap checks, and /kfb-preview/ sitemap exclusion; preserve KFB auth/noindex and verify both origins."
 }
