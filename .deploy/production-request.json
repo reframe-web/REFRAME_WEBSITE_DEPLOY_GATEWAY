@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T14:14:00.000Z",
-  "reason": "REGENESIS_CPU_TIMING_V2: replace the V1 runtime string-patched CPU worker with a baked shared-gravity worker. VS CPU player and NPC both use the selected WORLD fall-speed curve; CPU difficulty changes think time, placement quality/mistake rate and attack pressure only. Gravity updates apply to the next CPU piece without restarting the current fall. Preserve gameplay V4 BREAK/FUSE/settle motion, rankings/online, KFB auth, DRAFT_MODE/noindex and security boundaries. Keep PWA cache v24 and verify workers.dev + public domain."
+  "requested_at": "2026-10-07T15:15:00.000Z",
+  "reason": "SEO_PUBLIC_LAUNCH_V1: publish RE:FRAME indexability after user/legal approval; publish robots + sitemap + canonical; exclude /kfb-preview/ and preserve KFB auth/noindex; verify workers.dev + public domain."
 }
