@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T08:23:00.000Z",
-  "reason": "REGENESIS_LOGO_V1_FINAL_VERIFY: rerun the finalized logo release after correcting the live verification contract from service-worker cache v20 to the intentionally deployed v21. Public version c399fe58-2c2b-4bdb-af29-05fa66614282 already received the logo assets; this run must confirm the current Drive source, build/auth/game regressions, PNG PWA icons, approved start-screen logo, v21 stale-runtime recovery, workers.dev and public-domain live state. No gameplay/security boundary changes."
+  "requested_at": "2026-10-07T09:10:00.000Z",
+  "reason": "REGENESIS_EASY_ACCEL_V2: replace the imperceptible EASY 3%-per-level gravity curve with staged acceleration (5% through early levels, 7% mid levels, 9% from level 10 onward) while preserving a 15% slower-than-NORMAL guardrail and 190ms EASY floor. Update start-screen speed hint, bump RE:GENESIS service-worker cache to v22, and extend regression/live verification. Preserve NORMAL/HARD curves, scoring, rankings, online/CPU/BREAK V3, logo rollout, KFB auth, DRAFT_MODE and security boundaries."
 }
