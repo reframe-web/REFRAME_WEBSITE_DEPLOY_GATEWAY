@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T02:29:26.063Z",
-  "reason": "REGENESIS_DO_MIGRATION: retry after correcting Gateway one-shot migration marker path; rank TOP10 and two-player online rooms source stable; local tests passed; preserve RE:FRAME logo and KFB."
+  "requested_at": "2026-10-07T03:49:35.413Z",
+  "reason": "REGENESIS_SOLO_SPEED_V1: EASY NORMAL HARD distinct initial gravity + per-level acceleration, difficulty-isolated JST Top10/local best, mobile portrait-landscape lobby layout and back to menu; retain network rooms, official branding, KFB auth and DRAFT_MODE. 8 Drive source files updated, backend and 10 viewport static QA passed."
 }
