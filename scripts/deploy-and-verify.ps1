@@ -57,7 +57,7 @@ try {
 
   # One-time Durable Object SQLite migration cannot use Wrangler Versions Upload.
   # Keep the normal candidate-version workflow for every other release.
-  $requestFile = Join-Path (Get-Location) ".deploy/production-request.json"
+  $requestFile = Join-Path (Split-Path -Parent $PSScriptRoot) ".deploy/production-request.json"
   $releaseReason = ""
   if (Test-Path -LiteralPath $requestFile) {
     $requestInfo = Get-Content -LiteralPath $requestFile -Raw | ConvertFrom-Json
