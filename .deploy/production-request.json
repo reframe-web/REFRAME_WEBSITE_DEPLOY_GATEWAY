@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-07T08:02:00.000Z",
-  "reason": "REGENESIS_LOGO_V1: adopt the user-approved circular neon 再生 / RE:GENESIS game logo as the canonical game identity. Replace the start-screen text title with the approved logo asset while retaining an accessible text heading; add canonical master, optimized WebP display asset, padded 192/512 PNG PWA icons for round-thumbnail safety; update manifest, service worker cache v21, build copy rules, and regression/live verification including exact pixel hashes. Preserve procedural gameplay visuals, BREAK V3, rankings/online logic, KFB auth, RE:FRAME branding, DRAFT_MODE and existing security boundaries."
+  "requested_at": "2026-10-07T08:16:30.000Z",
+  "reason": "REGENESIS_LOGO_V1_FINAL: finish the user-approved circular neon 再生 / RE:GENESIS identity rollout after generation is closed. Use the approved logo on the start screen with accessible text fallback; serve optimized display WebP, square social share image, and round/mask-safe 192/512 PNG PWA icons; switch game favicon/PWA outputs to PNG, preload the logo, bump service-worker cache to v21, and update build/regression/live checks. Preserve gameplay, BREAK V3, rankings/online logic, KFB auth, RE:FRAME brand, DRAFT_MODE and security boundaries."
 }
