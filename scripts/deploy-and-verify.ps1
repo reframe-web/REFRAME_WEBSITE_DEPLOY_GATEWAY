@@ -67,7 +67,7 @@ try {
     $migrationConfigured = @($config.migrations | Where-Object { $_.tag -eq "regenesis-network-v1" -and @($_.new_sqlite_classes).Count -ge 2 }).Count -eq 1
     if (-not $migrationConfigured) { throw "RE:GENESIS one-time SQLite migration is absent or incomplete in Drive config." }
     Write-Host "RE:GENESIS first SQLite Durable Object migration: validated direct Worker deploy (one-time only)."
-    & npx --yes wrangler@4.145.0 deploy --config wrangler.jsonc --name $workerName --outdir .wrangler-releases
+    & npx --yes wrangler@4.145.0 deploy --config wrangler.jsonc --name $workerName
     if ($LASTEXITCODE -ne 0) { throw "Direct Worker deployment for SQLite DO migration failed." }
     if (-not (Invoke-LiveVerification -Origin $expectedOrigin -Label "workers.dev" -MaxAttempts 4 -DelaySeconds 10)) {
       throw "RE:GENESIS migration live Worker verification failed."
