@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-15T18:12:00+09:00",
-  "reason": "RE_FRAME_TEMPLATE_PREVIEWS_20261015_FOLLOWUP: register the new template-preview-regenesis.webp asset in scripts/build.mjs, after run 89 verified the other five refreshed preview assets and found the new file was not copied. Run npm test, source build, KFB auth verification, and static/live verification on both Worker and public domain."
+  "requested_at": "2026-10-15T18:21:00+09:00",
+  "reason": "RE_FRAME_TEMPLATE_PREVIEWS_20261015_VERIFY: include /assets/template-preview-regenesis.webp in verify-live.mjs asset probes so the newly registered RE:GENESIS catalog preview is checked on both Worker and public domain during deployment verification."
 }
