@@ -1,4 +1,4 @@
 {
-  "requested_at": "2026-10-14T09:49:00.000Z",
-  "reason": "RE_FRAME_COPY_SEO_20261014: publish the already-saved Drive canonical copy/SEO refinement (8 public pages / 10 changes) without modifying any KFB preview source, auth/access, robots policy, sitemap scope, secrets, or infrastructure. Run npm test, source build, KFB auth verification, static/live verification on both Worker and public domain. Preserve all currently approved production settings."
+  "requested_at": "2026-10-15T18:10:00+09:00",
+  "reason": "RE_FRAME_TEMPLATE_PREVIEWS_20261015: replace the five public template preview assets with cleaned real-screen crops, add a dedicated RE:GENESIS catalog preview asset, and point the home/template catalog cards at it. Run npm test, source build, KFB auth verification, and static/live verification on both Worker and public domain. Preserve approved production access, robots, sitemap, secrets, and infrastructure."
 }
